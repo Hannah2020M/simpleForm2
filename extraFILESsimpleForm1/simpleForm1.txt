@@ -1,0 +1,2057 @@
+
+
+simpleForm1
+stored in C:\Users\h19sl\Documents\Git-Exercises\gradedAsgnmntLC2022\simpleForm1\extraFILESsimpleForm1
+
+https://stackoverflow.com/questions/2805613/creating-populating-javascript-custom-object
+objectName["new-key"] = propertyValue;
+
+https://www.javascripttutorial.net/es6/javascript-class/
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.getName = function () {
+    return this.name;
+};
+
+var john = new Person("John Doe");
+console.log(john.getName());
+
+
+===    5:17 PM 3/17/2022 worked with direct return 
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+const input = require("readline-sync");
+let shopItems = ['orangeJuice','Spinach    ','tomatoSauce'];
+let myList = []; let itemArray = []; let numberArray = [];
+let honeyDo=[];let noteArray=[];
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number for quantity of  ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) { text = " Input not valid";           
+            } else { text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+              let note=input.question('Enter additional notes: ');
+                    console.log(" ");
+              noteArray.push(note);
+              }
+  }
+function itemDoneObj(item,itemNum){
+    this.item = item;
+    this.itemNum = itemNum;
+}
+itemDoneObj.prototype.getItem = function(){ return this.item};
+itemDoneObj.prototype.getItemNum= function(){return this.getItemNum};
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      let itemObj = new itemDoneObj(itemArray[i],numberArray[i]);
+      itemObj["note"] = 'Additional info';
+      itemObj.note = noteArray[i];
+//console.log(itemObj);
+      myList.push(itemObj);
+    //  console.log('myList iteration');console.log(myList);
+      honeyDo.push(Number(itemObj.itemNum)); 
+      honeyDo.push(itemObj.item);
+         }  let b = myList + honeyDo;
+            return myList;
+}
+console.log(itemCheckNumber());
+//console.log('myList');console.log(myList);
+console.log('honeyDo');console.log(honeyDo);
+//  console.log('honeyDo');console.log(honeyDo);
+
+==========++++++++============
+==  5:13 PM 3/17/2022 worked with console not return
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+const input = require("readline-sync");
+let shopItems = ['orangeJuice','Spinach    ','tomatoSauce'];
+let myList = []; let itemArray = []; let numberArray = [];
+let honeyDo=[];let noteArray=[];
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number for quantity of  ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) { text = " Input not valid";           
+            } else { text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+              let note=input.question('Enter additional notes: ');
+                    console.log(" ");
+              noteArray.push(note);
+              }
+  }
+function itemDoneObj(item,itemNum){
+    this.item = item;
+    this.itemNum = itemNum;
+}
+itemDoneObj.prototype.getItem = function(){ return this.item};
+itemDoneObj.prototype.getItemNum= function(){return this.getItemNum};
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      let itemObj = new itemDoneObj(itemArray[i],numberArray[i]);
+      itemObj["note"] = 'Additional info';
+      itemObj.note = noteArray[i];
+//console.log(itemObj);
+      myList.push(itemObj);
+    //  console.log('myList iteration');console.log(myList);
+      honeyDo.push(Number(itemObj.itemNum)); 
+      honeyDo.push(itemObj.item);
+         }  let b = myList + honeyDo;
+            return myList;
+}
+console.log(itemCheckNumber());
+//console.log('myList');console.log(myList);
+console.log('honeyDo');console.log(honeyDo);
+//  console.log('honeyDo');console.log(honeyDo);
+
+
+
+==========++++++++=============
+==  4:48 PM 3/17/2022 worked to add 'note' property to itemObj
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+const input = require("readline-sync");
+let shopItems = ['orangeJuice','Spinach','tomatoSauce'];
+let myList = []; let itemArray = []; let numberArray = [];
+let honeyDo=[];let noteArray=[];
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number for quantity of  ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) { text = " Input not valid";           
+            } else { text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+              let note=input.question('Enter additional notes: ');
+              noteArray.push(note);
+              }
+  }
+function itemDoneObj(item,itemNum){
+    this.item = item;
+    this.itemNum = itemNum;
+}
+itemDoneObj.prototype.getItem = function(){ return this.item};
+itemDoneObj.prototype.getItemNum= function(){return this.getItemNum};
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      let itemObj = new itemDoneObj(itemArray[i],numberArray[i]);
+      itemObj["note"] = 'Additional info';
+console.log(itemObj);
+      myList.push(itemObj);
+      honeyDo.push(Number(itemObj.itemNum));
+      honeyDo.push(itemObj.item);
+    }  return honeyDo;
+}
+console.log(itemCheckNumber());
+console.log('myList');console.log(myList);
+console.log('honeyDo');console.log(honeyDo);
+//  console.log('honeyDo');console.log(honeyDo);
+
+
+
+===========+++++++++++++++++=============
+==  4:29 PM 3/17/2022 worked ===++++
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+const input = require("readline-sync");
+let shopItems = ['orangeJuice','Spinach','tomatoSauce'];
+let myList = []; let itemArray = []; let numberArray = []; let honeyDo=[];
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number of ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) { text = " Input not valid";           
+            } else { text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+              }
+  }
+function itemDoneObj(item,itemNum){
+    this.item = item;
+    this.itemNum = itemNum;
+}
+itemDoneObj.prototype.getItem = function(){ return this.item};
+itemDoneObj.prototype.getItemNum= function(){return this.getItemNum};
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      console.log(`i ${i} TEMPitemArray ${itemArray}  ${numberArray}\n`); 
+      let itemObj = new itemDoneObj(itemArray[i],numberArray[i]);
+console.log(itemObj);
+      myList.push(itemObj);
+      honeyDo.push(Number(itemObj.itemNum));
+      honeyDo.push(itemObj.item);
+    }//console.log(` itemArray ${itemArray} numberArray ${numberArray}`);
+  let myReturn=(` itemArray ${itemArray} numberArray ${numberArray}`);
+  return honeyDo;
+}
+console.log(itemCheckNumber());
+console.log('myList');console.log(myList);
+console.log('honeyDo');console.log(honeyDo);
+    
+
+
+===========++++++++============
+==  4:25 PM 3/17/2022 worked honey Do ==++++
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+const input = require("readline-sync");
+let shopItems = ['orangeJuice','Spinach','tomatoSauce'];
+let myList = []; let itemArray = []; let numberArray = []; let honeyDo=[];
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number of ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) { text = " Input not valid";           
+            } else { text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+              }
+  }
+function itemDoneObj(item,itemNum){
+    this.item = item;
+    this.itemNum = itemNum;
+}
+itemDoneObj.prototype.getItem = function(){ return this.item};
+itemDoneObj.prototype.getItemNum= function(){return this.getItemNum};
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      console.log(`i ${i} TEMPitemArray ${itemArray}  ${numberArray}\n`); 
+      let itemObj = new itemDoneObj(itemArray[i],numberArray[i]);
+console.log(itemObj);
+      myList.push(itemObj);
+      console.log('itemObj.item');console.log(itemObj.item);
+      honeyDo.push(Number(itemObj.itemNum));
+      honeyDo.push(itemObj.item);
+    }//console.log(` itemArray ${itemArray} numberArray ${numberArray}`);
+  let myReturn=(` itemArray ${itemArray} numberArray ${numberArray}`);
+  return myReturn;
+}
+console.log(itemCheckNumber());
+console.log('myList');console.log(myList);
+console.log('honeyDo');console.log(honeyDo);
+    
+
+
+=======+++++++++==================
+== 4:14 PM 3/17/2022 worked myList an array of objects of each item
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+const input = require("readline-sync");
+let shopItems = ['orangeJuice','Spinach','tomatoSauce','appleSauce','celery'];
+let myList = []; let itemArray = []; let numberArray = []; let honeyDo=[];
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number of ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) { text = " Input not valid";           
+            } else { text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+              }
+  }
+//let allDoneObj = {'groceryItem': 'numberNeeded'};
+function itemDoneObj(item,itemNum){
+    this.item = item;
+    this.itemNum = itemNum;
+}
+itemDoneObj.prototype.getItem = function(){ return this.item};
+itemDoneObj.prototype.getItemNum= function(){return this.getItemNum};
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      console.log(`i ${i} TEMPitemArray ${itemArray}  ${numberArray}\n`); 
+     // allDoneObj[itemArray[i]] = numberArray[i];
+  let itemObj = new itemDoneObj(itemArray[i],numberArray[i]);
+console.log(itemObj);
+      myList.push(itemObj);
+      console.log('myList');console.log(myList);
+      // honeyDo.push(myList.item);
+      // honeyDo.push('myList.itemNum');
+      
+    }//console.log(` itemArray ${itemArray} numberArray ${numberArray}`);
+  let myReturn=(` itemArray ${itemArray} numberArray ${numberArray}`);
+  return myReturn;
+}
+
+console.log(itemCheckNumber());
+//console.log(`allDoneObj: `);console.log(allDoneObj);
+console.log('myList');console.log(myList);
+//console.log('honeyDo');console.log(honeyDo);
+    
+
+
+
+== 3:53 PM 3/17/2022 working code only 1 for loop 
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+const input = require("readline-sync");
+let shopItems = ['orangeJuice','Spinach','tomatoSauce','appleSauce','celery'];
+let myList = []; let itemArray = []; let numberArray = []; 
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number of ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) { text = " Input not valid";           
+            } else { text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+              }
+  }
+let allDoneObj = {'groceryItem': 'numberNeeded'};
+function itemDoneObj(item,itemNum){
+    this.item = item;
+    this.itemNum = itemNum;
+}
+itemDoneObj.prototype.getItem = function(){ return this.item};
+itemDoneObj.prototype.getItemNum= function(){return this.getItemNum};
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      console.log(`i ${i} TEMPitemArray ${itemArray}  ${numberArray}\n`); 
+      allDoneObj[itemArray[i]] = numberArray[i];
+  let itemObj = new itemDoneObj(itemArray[i],numberArray[i]);
+console.log(itemObj);
+      myList.push(itemObj);
+      console.log(myList);
+    }//console.log(` itemArray ${itemArray} numberArray ${numberArray}`);
+  let myReturn=(` itemArray ${itemArray} numberArray ${numberArray}`);
+  return myReturn;
+}
+console.log(itemCheckNumber());
+console.log(`allDoneObj: `);console.log(allDoneObj);
+console.log('myList');console.log(myList);
+
+    
+
+
+==   2:23 PM 3/17/2022 ERROR ===+++++
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+        // Write your JavaScript code here!
+const input = require("readline-sync");
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = input.question("Enter the number of shopItem : ");
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 0 || x > 10) {
+            text = "Input is not valid";
+          } else {
+            text = "Input is  OK";
+          }
+          console.log(`The ${x} ${text}`);
+        }
+        
+console.log(myCheckNumber());
+  let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+  'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+ 'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+'MadelineCookies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+let myList = {};
+let itemArray = [];
+let numberArray = []; 
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number of ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) {
+              text = " Input not valid";
+            } else {
+              text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+            }
+ }
+let listDoneArr = [];
+let allDoneArr =[];
+let allDoneObj = {'groceryItem': 'numberNeeded'};
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      console.log(`i ${i} TEMPitemArray ${itemArray}  ${numberArray}`)
+      console.log(" ");
+    }
+    console.log(` itemArray ${itemArray} numberArray ${numberArray}`);
+}
+console.log(itemCheckNumber());
+
+for(let j=0; j<itemArray.length; j++){
+allDoneObj[itemArray[j]] = numberArray[j];
+console.log(allDoneObj);//console.log(`j ${j} allDoneObj ${allDOneObj}`);
+ // allDoneArr.push(allDoneObj);
+}
+listDoneArr.push(`{${itemArray[0]}:${numberArray[0]}}`);
+allDoneArr.push(itemArray[0]);
+console.log(`listDoneArr: `);
+console.log(listDoneArr);
+console.log(`allDoneArr: `);
+console.log(allDoneArr);
+console.log(`allDoneObj: `);
+console.log(allDoneObj);
+
+    
+
+
+================++++++============
+== 2:11 PM 3/17/2022 ERROR ==++++++++++
+== allDOneArr had 30 objects of WHOLE allDoneObj instead of 
+objects of one item each like [{orangeJuice : 2},{lettuce:3}]
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+        // Write your JavaScript code here!
+const input = require("readline-sync");
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = input.question("Enter the number of shopItem : ");
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 0 || x > 10) {
+            text = "Input is not valid";
+          } else {
+            text = "Input is  OK";
+          }
+          console.log(`The ${x} ${text}`);
+        }
+        
+console.log(myCheckNumber());
+  let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+  'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+ 'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+'MadelineCookies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+let myList = {};
+let itemArray = [];
+let numberArray = []; 
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number of ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) {
+              text = " Input not valid";
+            } else {
+              text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+            }
+ }
+
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      console.log(`i ${i} TEMPitemArray ${itemArray}  ${numberArray}`)
+      console.log(" ");
+    }
+    console.log(` itemArray ${itemArray} numberArray ${numberArray}`);
+}
+console.log(itemCheckNumber());
+let listDoneArr = [];
+let allDoneArr =[];
+let allDoneObj = {'groceryItem': 'numberNeeded'};
+for(let j=0; j<itemArray.length; j++){
+allDoneObj[itemArray[j]] = numberArray[j];
+  allDoneArr.push(allDoneObj);
+}
+listDoneArr.push(`{${itemArray[0]}:${numberArray[0]}}`);
+allDoneArr.push(itemArray[0]);
+console.log(`listDoneArr: `);
+console.log(listDoneArr);
+console.log(`allDoneArr: `);
+console.log(allDoneArr);
+console.log(`allDoneObj: `);
+console.log(allDoneObj);
+
+    
+
+
+==========+++++++++===============
+===    2:01 PM 3/17/2022 worked removed redundant code==++++
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+        // Write your JavaScript code here!
+const input = require("readline-sync");
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = input.question("Enter the number of shopItem : ");
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 0 || x > 10) {
+            text = "Input is not valid";
+          } else {
+            text = "Input is  OK";
+          }
+          console.log(`The ${x} ${text}`);
+        }
+        
+console.log(myCheckNumber());
+  let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+  'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+ 'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+'MadelineCookies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+let myList = {};
+let itemArray = [];
+let numberArray = []; 
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number of ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) {
+              text = " Input not valid";
+            } else {
+              text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+            }
+ }
+
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      console.log(`i ${i} TEMPitemArray ${itemArray}  ${numberArray}`)
+      console.log(" ");
+    }
+    console.log(` itemArray ${itemArray} numberArray ${numberArray}`);
+}
+console.log(itemCheckNumber());
+let listDoneArr = [];
+let allDoneArr =[];
+let allDoneObj = {'groceryItem': 'numberNeeded'};
+for(let j=0; j<itemArray.length; j++){
+allDoneObj[itemArray[j]] = numberArray[j];
+}
+listDoneArr.push(`{${itemArray[0]}:${numberArray[0]}}`);
+allDoneArr.push(itemArray[0]);
+console.log(`listDoneArr: `);
+console.log(listDoneArr);
+console.log(`allDoneArr: `);
+console.log(allDoneArr);
+console.log(`allDoneObj: `);
+console.log(allDoneObj);
+
+    
+
+    
+
+
+
+=======+++++++++==============
+=== 1:51 PM 3/17/2022 ===++++======
+
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+        // Write your JavaScript code here!
+const input = require("readline-sync");
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = input.question("Enter the number of shopItem : ");
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 0 || x > 10) {
+            text = "Input is not valid";
+          } else {
+            text = "Input is  OK";
+          }
+          console.log(`The ${x} ${text}`);
+         // document.getElementById("demo").innerHTML =`${text } 
+         //  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        }
+        
+console.log(myCheckNumber());
+
+        // function itemCheckNumber() {
+        //     // Get the value of the input field with id="milkItem"
+        //     let y =input.question("Enter a number between 1 and 10: ");
+        //     // If y is Not a Number or less than one or greater than 10
+        //     let text;
+        //     if (isNaN(y) || y < 1 || y > 10) {
+        //       text = "item Input not valid";
+        //     } else {
+        //       text = "item Input OK";
+        //     }
+        //    console.log(`The ${y} ${text}`);
+        //    // cument.getElementById("item").innerHTML =`${text } 
+        //    //   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`; do
+        //   }
+//console.log(itemCheckNumber());
+  let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+  'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+  'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+'MadelineCOokies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+let myList = {};
+let itemArray = [];
+let numberArray = []; 
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number of ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) {
+              text = " Input not valid";
+            } else {
+              text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+            }
+          // console.log(`The ${y} ${text}`);
+    //console.log(` TEMPitemArray ${itemArray}  ${numberArray}`)
+    
+          }
+//console.log(eachItemCheck('lettuce'));
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+    eachItemCheck(shopItems[i]);
+     console.log(`i ${i} TEMPitemArray ${itemArray}  ${numberArray}`)
+    console.log(" ");
+    }
+ console.log(` itemArray ${itemArray} numberArray ${numberArray}`);
+}
+console.log(itemCheckNumber());
+let listDoneArr = [];
+let allDoneArr ;
+let allDoneObj = {'groceryItem': 'numberNeeded'};
+//for(let j=0; j<itemArray.length; j++){
+allDoneObj["idli"] = 2;
+//}
+listDoneArr.push(`{${itemArray[0]}:${numberArray[0]}}`);
+allDoneArr.push(itemArray[0]);
+console.log(`listDoneArr: `);
+console.log(listDoneArr);
+console.log(`allDoneArr: `);
+console.log(allDoneArr);
+console.log(`allDoneObj: `);
+console.log(allDoneObj);
+for(let j=0; j<itemArray.length; j++){
+  console.log(numberArray[j]);
+  console.log(itemArray[j] );  
+allDoneObj[itemArray[j]] = numberArray[j];
+ // allDoneArr.push(allDoneObj);
+}
+console.log(`allDoneObj: `);
+console.log(allDoneObj);
+
+console.log(`allDoneArr: `);
+console.log(allDoneArr);
+
+
+
+    
+
+
+  
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    /*
+    <form id="shopForm">
+    <p id="currentItem"></p> <input id="shopItem">
+    <button type="button" onclick="itemCheckNumber()">Submit</button>
+    <p id="item"></p>
+    <p id="itemArray"></p>
+    <p id="numberArray"></p>
+</form>
+*/
+
+//for(let i=0; i<shopItems.length; i++){
+    // shopItems[i] <input id="checkItem" >
+    //  <button type="button" onclick="itemCheckNumber">Submit</button>
+    //   <p id="milk"></p> 
+    //  }//<!--end of for shopItems-->
+    // function milkCheckNumber() {
+    //     for(let i=0;i<shopItems.length;i++){
+    //     // Get the value of the input field with id="numb"
+    //     let x = document.getElementById("milkItem").value;
+    //     // If x is Not a Number or less than one or greater than 10
+    //     let text;
+    //     if (isNaN(x) || x < 1 || x > 10) {
+    //       text = "Input not valid";
+    //     } else {
+    //       text = "Input OK";
+    //     }
+    //     document.getElementById("milk").innerHTML =`${text } 
+    //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+    // }//end of for shopItem
+    //  }
+
+// function myCheckItem() {
+//     // Get the value of the input field with id="numb"
+//     let x = document.getElementById("checkItem").value;
+//     // If x is Not a Number or less than one or greater than 10
+//     let text;
+//     if (isNaN(x) || x < 1 || x > 10) {
+//       text = "Input not valid";
+//     } else {
+//       text = "Input OK";
+//     }
+//     document.getElementById("demo").innerHTML =`${text } 
+//      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+//   }
+
+
+// window.addEventListener("load", function() {
+//     window.alert("All fields are required");
+//     event.preventDefault();
+   
+//     // let listedPlanets;
+//     // // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+//     // let listedPlanetsResponse;
+//     // listedPlanetsResponse.then(function (result) {
+//     //     listedPlanets = result;
+//     //     console.log(listedPlanets);
+//     // }).then(function () {
+//     //     console.log(listedPlanets);
+//     //     // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+//     //     window.alert("All fields are required");
+//     //     event.preventDefault();
+//     // })
+    
+//  });
+
+
+
+
+
+
+=======+++++=====================
+===  12:56 PM 3/17/2022 worked=======+++++++==
+====  populating object with key-value pairs of groceryItem&numberNeeded ==++==========
+
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+        // Write your JavaScript code here!
+const input = require("readline-sync");
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = input.question("Enter the number of shopItem : ");
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 0 || x > 10) {
+            text = "Input is not valid";
+          } else {
+            text = "Input is  OK";
+          }
+          console.log(`The ${x} ${text}`);
+         // document.getElementById("demo").innerHTML =`${text } 
+         //  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        }
+        
+console.log(myCheckNumber());
+
+        // function itemCheckNumber() {
+        //     // Get the value of the input field with id="milkItem"
+        //     let y =input.question("Enter a number between 1 and 10: ");
+        //     // If y is Not a Number or less than one or greater than 10
+        //     let text;
+        //     if (isNaN(y) || y < 1 || y > 10) {
+        //       text = "item Input not valid";
+        //     } else {
+        //       text = "item Input OK";
+        //     }
+        //    console.log(`The ${y} ${text}`);
+        //    // cument.getElementById("item").innerHTML =`${text } 
+        //    //   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`; do
+        //   }
+//console.log(itemCheckNumber());
+  let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+  'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+  'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+'MadelineCOokies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+let myList = {};
+let itemArray = [];
+let numberArray = []; 
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number of ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) {
+              text = " Input not valid";
+            } else {
+              text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+            }
+          // console.log(`The ${y} ${text}`);
+    //console.log(` TEMPitemArray ${itemArray}  ${numberArray}`)
+    
+          }
+//console.log(eachItemCheck('lettuce'));
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+    eachItemCheck(shopItems[i]);
+     console.log(`i ${i} TEMPitemArray ${itemArray}  ${numberArray}`)
+    console.log(" ");
+    }
+ console.log(` itemArray ${itemArray} numberArray ${numberArray}`);
+}
+console.log(itemCheckNumber());
+let listDoneArr = [];
+let allDoneObj = {'groceryItem': 'numberNeeded'};
+for(let j-0; j<itemArray.length; j++){
+objectName["idli"] = 2;
+}
+listDoneArr.push(`{${itemArray[0]}:${numberArray[0]}}`);
+allDoneArr.push(itemArray[0]);
+console.log(`listDoneArr: `);
+console.log(listDoneArr);
+console.log(`allDoneArr: `);
+console.log(allDoneArr);
+console.log(`allDoneObj: `);
+console.log(allDoneObj);
+
+    
+
+
+  
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    /*
+    <form id="shopForm">
+    <p id="currentItem"></p> <input id="shopItem">
+    <button type="button" onclick="itemCheckNumber()">Submit</button>
+    <p id="item"></p>
+    <p id="itemArray"></p>
+    <p id="numberArray"></p>
+</form>
+*/
+
+//for(let i=0; i<shopItems.length; i++){
+    // shopItems[i] <input id="checkItem" >
+    //  <button type="button" onclick="itemCheckNumber">Submit</button>
+    //   <p id="milk"></p> 
+    //  }//<!--end of for shopItems-->
+    // function milkCheckNumber() {
+    //     for(let i=0;i<shopItems.length;i++){
+    //     // Get the value of the input field with id="numb"
+    //     let x = document.getElementById("milkItem").value;
+    //     // If x is Not a Number or less than one or greater than 10
+    //     let text;
+    //     if (isNaN(x) || x < 1 || x > 10) {
+    //       text = "Input not valid";
+    //     } else {
+    //       text = "Input OK";
+    //     }
+    //     document.getElementById("milk").innerHTML =`${text } 
+    //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+    // }//end of for shopItem
+    //  }
+
+// function myCheckItem() {
+//     // Get the value of the input field with id="numb"
+//     let x = document.getElementById("checkItem").value;
+//     // If x is Not a Number or less than one or greater than 10
+//     let text;
+//     if (isNaN(x) || x < 1 || x > 10) {
+//       text = "Input not valid";
+//     } else {
+//       text = "Input OK";
+//     }
+//     document.getElementById("demo").innerHTML =`${text } 
+//      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+//   }
+
+
+// window.addEventListener("load", function() {
+//     window.alert("All fields are required");
+//     event.preventDefault();
+   
+//     // let listedPlanets;
+//     // // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+//     // let listedPlanetsResponse;
+//     // listedPlanetsResponse.then(function (result) {
+//     //     listedPlanets = result;
+//     //     console.log(listedPlanets);
+//     // }).then(function () {
+//     //     console.log(listedPlanets);
+//     //     // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+//     //     window.alert("All fields are required");
+//     //     event.preventDefault();
+//     // })
+    
+//  });
+
+
+
+
+
+
+==  12:00 PM 3/17/2022  worked ==+++===
+repl.it
+OUTPUT 2hnumberArrary
+stored in C:\Users\h19sl\Documents\Git-Exercises\gradedAsgnmntLC2022\simpleForm1\extraFILESsimpleForm1\images
+ 
+
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+        // Write your JavaScript code here!
+const input = require("readline-sync");
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = input.question("Enter the number of shopItem : ");
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 0 || x > 10) {
+            text = "Input is not valid";
+          } else {
+            text = "Input is  OK";
+          }
+          console.log(`The ${x} ${text}`);
+         // document.getElementById("demo").innerHTML =`${text } 
+         //  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        }
+        
+console.log(myCheckNumber());
+
+        // function itemCheckNumber() {
+        //     // Get the value of the input field with id="milkItem"
+        //     let y =input.question("Enter a number between 1 and 10: ");
+        //     // If y is Not a Number or less than one or greater than 10
+        //     let text;
+        //     if (isNaN(y) || y < 1 || y > 10) {
+        //       text = "item Input not valid";
+        //     } else {
+        //       text = "item Input OK";
+        //     }
+        //    console.log(`The ${y} ${text}`);
+        //    // cument.getElementById("item").innerHTML =`${text } 
+        //    //   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`; do
+        //   }
+//console.log(itemCheckNumber());
+  let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+  'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+  'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+'MadelineCOokies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+let myList = {};
+let itemArray = [];
+let numberArray = []; 
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number of ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) {
+              text = " Input not valid";
+            } else {
+              text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+            }
+          // console.log(`The ${y} ${text}`);
+    //console.log(` TEMPitemArray ${itemArray}  ${numberArray}`)
+    
+          }
+//console.log(eachItemCheck('lettuce'));
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+    eachItemCheck(shopItems[i]);
+     console.log(`i ${i} TEMPitemArray ${itemArray}  ${numberArray}`)
+    console.log(" ");
+    }
+ console.log(` itemArray ${itemArray} numberArray ${numberArray}`);
+}
+console.log(itemCheckNumber());
+let itemObj = {};
+
+
+    
+
+
+  
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    /*
+    <form id="shopForm">
+    <p id="currentItem"></p> <input id="shopItem">
+    <button type="button" onclick="itemCheckNumber()">Submit</button>
+    <p id="item"></p>
+    <p id="itemArray"></p>
+    <p id="numberArray"></p>
+</form>
+*/
+
+//for(let i=0; i<shopItems.length; i++){
+    // shopItems[i] <input id="checkItem" >
+    //  <button type="button" onclick="itemCheckNumber">Submit</button>
+    //   <p id="milk"></p> 
+    //  }//<!--end of for shopItems-->
+    // function milkCheckNumber() {
+    //     for(let i=0;i<shopItems.length;i++){
+    //     // Get the value of the input field with id="numb"
+    //     let x = document.getElementById("milkItem").value;
+    //     // If x is Not a Number or less than one or greater than 10
+    //     let text;
+    //     if (isNaN(x) || x < 1 || x > 10) {
+    //       text = "Input not valid";
+    //     } else {
+    //       text = "Input OK";
+    //     }
+    //     document.getElementById("milk").innerHTML =`${text } 
+    //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+    // }//end of for shopItem
+    //  }
+
+// function myCheckItem() {
+//     // Get the value of the input field with id="numb"
+//     let x = document.getElementById("checkItem").value;
+//     // If x is Not a Number or less than one or greater than 10
+//     let text;
+//     if (isNaN(x) || x < 1 || x > 10) {
+//       text = "Input not valid";
+//     } else {
+//       text = "Input OK";
+//     }
+//     document.getElementById("demo").innerHTML =`${text } 
+//      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+//   }
+
+
+// window.addEventListener("load", function() {
+//     window.alert("All fields are required");
+//     event.preventDefault();
+   
+//     // let listedPlanets;
+//     // // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+//     // let listedPlanetsResponse;
+//     // listedPlanetsResponse.then(function (result) {
+//     //     listedPlanets = result;
+//     //     console.log(listedPlanets);
+//     // }).then(function () {
+//     //     console.log(listedPlanets);
+//     //     // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+//     //     window.alert("All fields are required");
+//     //     event.preventDefault();
+//     // })
+    
+//  });
+
+
+
+
+
+
+
+
+==  1:11 AM 3/17/2022 working ==++++
+<! DOCTYPE>
+    <html>
+
+    <head>
+        <title>simpleForm1</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <p id="p1">This html page is used to test various properties that
+            could be used with HTML forms.
+        </p>
+        <a href="#simpleForm1">Simple Form</a> <br>
+        <a href="#launchForm">Launch Checklist Form</a> <br>
+        <a href="#shoppingForm">Shopping Form</a> <br>
+
+        <div id="exitPage">
+            <a href="https://www.google.com/">If you want to exit this page, please click here</a> <br>
+            If you want to say Good bye to this page, please click here :-
+            <input type="submit" onclick="myExit()" value="exit page">
+            <p id="exit"></p>
+            <br> <br>
+        </div>
+        <div id="simpleForm1">
+
+            <h1>Simple Form</h1>
+            <form>
+
+                Enter a number in between 1 & 10: <input id="checkNum">
+                <button type="button" onclick="myCheckNumber()">Submit number</button>
+                <p id="demo"></p>
+
+            </form>
+
+        </div>
+
+        <a href="#p1">Go to top of page</a> <br><br>
+        <div id="wholeLaunchForm">
+        <h1>Launch Checklist Form</h1>
+        <div id="missionTarget" data-testid="missionTarget">
+        </div>
+        <div id="launchForm">
+            <form data-testid="testForm">
+                <div class="formField">
+                    <label>Pilot Name <input type="text" name="pilotName" id="pilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Co-pilot Name <input type="text" name="copilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Fuel Level (L) <input type="text" name="fuelLevel" /></label>
+                </div>
+                <div class="formField">
+                    <label>Cargo Mass (kg) <input type="text" name="cargoMass" /></label>
+                </div>
+                <button id="formSubmit">Submit</button>
+                <p id="deleteBeforeSubmission">Extra text para</p>
+            </form>
+        </div>
+        <div id="launchStatusCheck">
+            <h2 id="launchStatus" data-testid="launchStatus">Awaiting Information Before Launch</h2>
+            <div id="faultyItems" data-testid="faultyItems">
+                <ol>
+                    <li id="pilotStatus" data-testid="pilotStatus">Pilot Ready</li>
+                    <li id="copilotStatus" data-testid="copilotStatus">Co-pilot Ready</li>
+                    <li id="fuelStatus" data-testid="fuelStatus">Fuel level high enough for launch</li>
+                    <li id="cargoStatus" data-testid="cargoStatus">Cargo mass low enough for launch</li>
+                </ol>
+            </div>
+        </div>
+        </div><!--end of whole launch FOrm wnclosing div-->
+        <a href="#p1">Go to top of page</a> <br><br>
+        
+        <div id="shoppingForm">
+            <h1>Shopping Form</h1>
+            <form id="shopForm">
+                <p id="currentItem"></p> <input id="shopItem">
+                <button type="button" onclick="itemCheckNumber()">Submit</button>
+                <p id="item"></p>
+                <p id="itemArray"></p>
+                <p id="numberArray"></p>
+            </form>
+
+
+        </div>
+
+        <a href="#p1">Go to top of page</a> <br>
+    </body>
+
+    </html>
+---------------------=----------------------
+        // Write your JavaScript code here!
+        function myExit(){
+            document.getElementById("exit").innerHTML =`Good bye !`;
+        }
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = document.getElementById("checkNum").value;
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+          } else {
+            text = "Input OK";
+          }
+          document.getElementById("demo").innerHTML =`${text } 
+           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        }
+        
+
+        // function itemCheckNumber() {
+        //     // Get the value of the input field with id="milkItem"
+        //     let x = document.getElementById("shopItem").value;
+        //     // If x is Not a Number or less than one or greater than 10
+        //     let text;
+        //     if (isNaN(x) || x < 1 || x > 10) {
+        //       text = "item Input not valid";
+        //     } else {
+        //       text = "item Input OK";
+        //     }
+        //     document.getElementById("item").innerHTML =`${text } 
+        //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        //   }
+  let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+  'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+  'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+'MadelineCOokies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+       
+function itemCheckNumber() {
+    let myList = {};
+    let itemArray = [];
+    let numberArray = [];
+    for (let i=0;i<shopItems.length; i++){
+        document.getElementById("currentItem").innerHTML = `${shopItems[i]}`;
+            // Get the value of the input field with id="shopItem"
+            let x = document.getElementById("shopItem").value;
+            // If x is Not a Number or less than one or greater than 10
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+              text = "item Input not valid";
+            } else {
+              text = "item Input OK";
+              console.log(x);
+              itemArray.push(shopItems[i]);
+              numberArray.push(x);
+            }
+            document.getElementById("item").innerHTML =`${text } 
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+             }//end of for
+             document.getElementById("itemArray").innerHTML =`${itemArray}`;
+             document.getElementById("numberArray").innerHTML = `${x}`;
+
+}
+//for(let i=0; i<shopItems.length; i++){
+    // shopItems[i] <input id="checkItem" >
+    //  <button type="button" onclick="itemCheckNumber">Submit</button>
+    //   <p id="milk"></p> 
+    //  }//<!--end of for shopItems-->
+    // function milkCheckNumber() {
+    //     for(let i=0;i<shopItems.length;i++){
+    //     // Get the value of the input field with id="numb"
+    //     let x = document.getElementById("milkItem").value;
+    //     // If x is Not a Number or less than one or greater than 10
+    //     let text;
+    //     if (isNaN(x) || x < 1 || x > 10) {
+    //       text = "Input not valid";
+    //     } else {
+    //       text = "Input OK";
+    //     }
+    //     document.getElementById("milk").innerHTML =`${text } 
+    //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+    // }//end of for shopItem
+    //  }
+
+// function myCheckItem() {
+//     // Get the value of the input field with id="numb"
+//     let x = document.getElementById("checkItem").value;
+//     // If x is Not a Number or less than one or greater than 10
+//     let text;
+//     if (isNaN(x) || x < 1 || x > 10) {
+//       text = "Input not valid";
+//     } else {
+//       text = "Input OK";
+//     }
+//     document.getElementById("demo").innerHTML =`${text } 
+//      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+//   }
+
+
+window.addEventListener("load", function() {
+    window.alert("All fields are required");
+    event.preventDefault();
+   
+    // let listedPlanets;
+    // // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+    // let listedPlanetsResponse;
+    // listedPlanetsResponse.then(function (result) {
+    //     listedPlanets = result;
+    //     console.log(listedPlanets);
+    // }).then(function () {
+    //     console.log(listedPlanets);
+    //     // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+    //     window.alert("All fields are required");
+    //     event.preventDefault();
+    // })
+    
+ });
+
+
+
+
+============+++++++++++++++=======================
+===   12:56 AM 3/17/2022 not working -===+++
+<! DOCTYPE>
+    <html>
+
+    <head>
+        <title>simpleForm1</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <p id="p1">This html page is used to test various properties that
+            could be used with HTML forms.
+        </p>
+        <a href="#simpleForm1">Simple Form</a> <br>
+        <a href="#launchForm">Launch Checklist Form</a> <br>
+        <a href="#shoppingForm">Shopping Form</a> <br>
+
+        <div id="exitPage">
+            <a href="https://www.google.com/">If you want to exit this page, please click here</a> <br>
+            If you want to say Good bye to this page, please click here :-
+            <input type="submit" onclick="myExit()" value="exit page">
+            <p id="exit"></p>
+            <br> <br>
+        </div>
+        <div id="simpleForm1">
+
+            <h1>Simple Form</h1>
+            <form>
+
+                Enter a number in between 1 and 10: <input id="checkNum">
+                <button type="button" onclick="myCheckNumber()">Submit number</button>
+                <p id="demo"></p>
+
+            </form>
+
+        </div>
+
+        <a href="#p1">Go to top of page</a> <br><br>
+        <div id="wholeLaunchForm">
+        <h1>Launch Checklist Form</h1>
+        <div id="missionTarget" data-testid="missionTarget">
+        </div>
+        <div id="launchForm">
+            <form data-testid="testForm">
+                <div class="formField">
+                    <label>Pilot Name <input type="text" name="pilotName" id="pilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Co-pilot Name <input type="text" name="copilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Fuel Level (L) <input type="text" name="fuelLevel" /></label>
+                </div>
+                <div class="formField">
+                    <label>Cargo Mass (kg) <input type="text" name="cargoMass" /></label>
+                </div>
+                <button id="formSubmit">Submit</button>
+                <p id="deleteBeforeSubmission">Extra text para</p>
+            </form>
+        </div>
+        <div id="launchStatusCheck">
+            <h2 id="launchStatus" data-testid="launchStatus">Awaiting Information Before Launch</h2>
+            <div id="faultyItems" data-testid="faultyItems">
+                <ol>
+                    <li id="pilotStatus" data-testid="pilotStatus">Pilot Ready</li>
+                    <li id="copilotStatus" data-testid="copilotStatus">Co-pilot Ready</li>
+                    <li id="fuelStatus" data-testid="fuelStatus">Fuel level high enough for launch</li>
+                    <li id="cargoStatus" data-testid="cargoStatus">Cargo mass low enough for launch</li>
+                </ol>
+            </div>
+        </div>
+        </div><!--end of whole launch FOrm wnclosing div-->
+        <a href="#p1">Go to top of page</a> <br><br>
+        
+        
+<div id="shoppingForm">
+            <h1>Shopping Form</h1>
+            <form id="shopForm">
+                <p id="currentItem">shoppingItem</p> <input id="shopItem">
+                <button type="button" onclick="itemCheckNumber()">Submit</button>
+                <p id="item"></p>
+
+            </form>
+  <p id="itemArray"></p>
+  <p id="NumberArray"></p>
+        </div>
+
+        <a href="#p1">Go to top of page</a> <br>
+    </body>
+
+    </html>
+------------------------=---------------------
+        // Write your JavaScript code here!
+        function myExit(){
+            document.getElementById("exit").innerHTML =`Good bye !`;
+        }
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = document.getElementById("checkNum").value;
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+          } else {
+            text = "Input OK";
+          }
+          document.getElementById("demo").innerHTML =`${text } 
+           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        }
+        
+
+        // function itemCheckNumber() {
+        //     // Get the value of the input field with id="milkItem"
+        //     let x = document.getElementById("shopItem").value;
+        //     // If x is Not a Number or less than one or greater than 10
+        //     let text;
+        //     if (isNaN(x) || x < 1 || x > 10) {
+        //       text = "item Input not valid";
+        //     } else {
+        //       text = "item Input OK";
+        //     }
+        //     document.getElementById("item").innerHTML =`${text } 
+        //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        //   }
+  let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+  'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+  'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+'MadelineCOokies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+       
+function itemCheckNumber() {
+    let myList = {};
+    let itemArray = [];
+    let nmberArray = [];
+    for (let i=0;i<shopItems.length; i++){
+        document.getElementById("currentItem").innerHTML = `${shopItems[i]}`;
+            // Get the value of the input field with id="shopItem"
+            let x = document.getElementById("shopItem").value;
+            // If x is Not a Number or less than one or greater than 10
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+              text = "item Input not valid";
+            } else {
+              text = "item Input OK";
+              console.log(x);
+              itemArray.push(x);
+            }
+            document.getElementById("item").innerHTML =`${text } 
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+          //  document.getElementById("itemArray").innerHTML =`${shopItems[i]}`
+            document.elementById("numberArray").innerHTML = `${x}`
+
+            }
+
+    }//end of for
+}
+
+
+window.addEventListener("load", function() {
+    window.alert("All fields are required");
+    event.preventDefault();
+   
+    // let listedPlanets;
+    // // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+    // let listedPlanetsResponse;
+    // listedPlanetsResponse.then(function (result) {
+    //     listedPlanets = result;
+    //     console.log(listedPlanets);
+    // }).then(function () {
+    //     console.log(listedPlanets);
+    //     // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+    //     window.alert("All fields are required");
+    //     event.preventDefault();
+    // })
+    
+ });
+
+
+==============+++++++++++++++================
+
+
+
+====   12:16 AM 3/17/2022 working code ======++++++====
+<! DOCTYPE>
+    <html>
+
+    <head>
+        <title>simpleForm1</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <p id="p1">This html page is used to test various properties that
+            could be used with HTML forms.
+        </p>
+        <a href="#simpleForm1">Simple Form</a> <br>
+        <a href="#launchForm">Launch Checklist Form</a> <br>
+        <a href="#shoppingForm">Shopping Form</a> <br>
+
+        <div id="exitPage">
+            <a href="https://www.google.com/">If you want to exit this page, please click here</a> <br>
+            If you want to say Good bye to this page, please click here :-
+            <input type="submit" onclick="myExit()" value="exit page">
+            <p id="exit"></p>
+            <br> <br>
+        </div>
+        <div id="simpleForm1">
+
+            <h1>Simple Form</h1>
+            <form>
+
+                Enter a number in between 1 and 10: <input id="checkNum">
+                <button type="button" onclick="myCheckNumber()">Submit number</button>
+                <p id="demo"></p>
+
+            </form>
+
+        </div>
+
+        <a href="#p1">Go to top of page</a> <br><br>
+        <div id="wholeLaunchForm">
+        <h1>Launch Checklist Form</h1>
+        <div id="missionTarget" data-testid="missionTarget">
+        </div>
+        <div id="launchForm">
+            <form data-testid="testForm">
+                <div class="formField">
+                    <label>Pilot Name <input type="text" name="pilotName" id="pilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Co-pilot Name <input type="text" name="copilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Fuel Level (L) <input type="text" name="fuelLevel" /></label>
+                </div>
+                <div class="formField">
+                    <label>Cargo Mass (kg) <input type="text" name="cargoMass" /></label>
+                </div>
+                <button id="formSubmit">Submit</button>
+                <p id="deleteBeforeSubmission">Extra text para</p>
+            </form>
+        </div>
+        <div id="launchStatusCheck">
+            <h2 id="launchStatus" data-testid="launchStatus">Awaiting Information Before Launch</h2>
+            <div id="faultyItems" data-testid="faultyItems">
+                <ol>
+                    <li id="pilotStatus" data-testid="pilotStatus">Pilot Ready</li>
+                    <li id="copilotStatus" data-testid="copilotStatus">Co-pilot Ready</li>
+                    <li id="fuelStatus" data-testid="fuelStatus">Fuel level high enough for launch</li>
+                    <li id="cargoStatus" data-testid="cargoStatus">Cargo mass low enough for launch</li>
+                </ol>
+            </div>
+        </div>
+        </div><!--end of whole launch FOrm wnclosing div-->
+        <a href="#p1">Go to top of page</a> <br><br>
+        
+        
+<div id="shoppingForm">
+            <h1>Shopping Form</h1>
+            <form id="shopForm">
+                <p id="currentItem">shoppingItem</p> <input id="shopItem">
+                <button type="button" onclick="itemCheckNumber()">Submit</button>
+                <p id="item"></p>
+
+            </form>
+
+        </div>
+
+        <a href="#p1">Go to top of page</a> <br>
+    </body>
+
+    </html>
+-----------------=-----------------
+//script.js
+        // Write your JavaScript code here!
+        function myExit(){
+            document.getElementById("exit").innerHTML =`Good bye !`;
+        }
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = document.getElementById("checkNum").value;
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+          } else {
+            text = "Input OK";
+          }
+          document.getElementById("demo").innerHTML =`${text } 
+           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        }
+        
+
+        // function itemCheckNumber() {
+        //     // Get the value of the input field with id="milkItem"
+        //     let x = document.getElementById("shopItem").value;
+        //     // If x is Not a Number or less than one or greater than 10
+        //     let text;
+        //     if (isNaN(x) || x < 1 || x > 10) {
+        //       text = "item Input not valid";
+        //     } else {
+        //       text = "item Input OK";
+        //     }
+        //     document.getElementById("item").innerHTML =`${text } 
+        //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        //   }
+
+//  // let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+//   'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+//   'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+// 'MadelineCOokies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+// 'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+        {/* <form id="shopForm">
+        <p id="currentItem">shoppingItem</p> <input id="shopItem">
+        <button type="button" onclick="itemCheckNumber()">Submit</button>
+        <p id="item"></p>
+
+        </form> */}
+
+function itemCheckNumber() {
+            // Get the value of the input field with id="milkItem"
+            let x = document.getElementById("shopItem").value;
+            // If x is Not a Number or less than one or greater than 10
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+              text = "item Input not valid";
+            } else {
+              text = "item Input OK";
+            }
+            document.getElementById("item").innerHTML =`${text } 
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+          }
+
+//for(let i=0; i<shopItems.length; i++){
+    // shopItems[i] <input id="checkItem" >
+    //  <button type="button" onclick="itemCheckNumber">Submit</button>
+    //   <p id="milk"></p> 
+    //  }//<!--end of for shopItems-->
+    // function milkCheckNumber() {
+    //     for(let i=0;i<shopItems.length;i++){
+    //     // Get the value of the input field with id="numb"
+    //     let x = document.getElementById("milkItem").value;
+    //     // If x is Not a Number or less than one or greater than 10
+    //     let text;
+    //     if (isNaN(x) || x < 1 || x > 10) {
+    //       text = "Input not valid";
+    //     } else {
+    //       text = "Input OK";
+    //     }
+    //     document.getElementById("milk").innerHTML =`${text } 
+    //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+    // }//end of for shopItem
+    //  }
+
+// function myCheckItem() {
+//     // Get the value of the input field with id="numb"
+//     let x = document.getElementById("checkItem").value;
+//     // If x is Not a Number or less than one or greater than 10
+//     let text;
+//     if (isNaN(x) || x < 1 || x > 10) {
+//       text = "Input not valid";
+//     } else {
+//       text = "Input OK";
+//     }
+//     document.getElementById("demo").innerHTML =`${text } 
+//      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+//   }
+
+
+window.addEventListener("load", function() {
+    window.alert("All fields are required");
+    event.preventDefault();
+   
+    // let listedPlanets;
+    // // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+    // let listedPlanetsResponse;
+    // listedPlanetsResponse.then(function (result) {
+    //     listedPlanets = result;
+    //     console.log(listedPlanets);
+    // }).then(function () {
+    //     console.log(listedPlanets);
+    //     // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+    //     window.alert("All fields are required");
+    //     event.preventDefault();
+    // })
+    
+ });
+
+
+
+
+
+
+
+========++++++++++==================
+---  12:07 AM 3/17/2022  working shoppingForm==++++
+2f
+C:\Users\h19sl\Documents\Git-Exercises\gradedAsgnmntLC2022\simpleForm1\extraFILESsimpleForm1\images
+
+<! DOCTYPE>
+    <html>
+
+    <head>
+        <title>simpleForm1</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <p id="p1">This html page is used to test various properties that
+            could be used with HTML forms.
+        </p>
+        <a href="#simpleForm1">Simple Form</a> <br>
+        <a href="#launchForm">Launch Checklist Form</a> <br>
+        <a href="#shoppingForm">Shopping Form</a> <br>
+
+        <div id="exitPage">
+            <a href="https://www.google.com/">If you want to exit this page, please click here</a> <br>
+            If you want to say Good bye to this page, please click here :-
+            <input type="submit" onclick="myExit()" value="exit page">
+            <p id="exit"></p>
+            <br> <br>
+        </div>
+        <div id="simpleForm1">
+
+            <h1>Simple Form</h1>
+            <form>
+
+                Enter a number in between 1 & 10: <input id="checkNum">
+                <button type="button" onclick="myCheckNumber()">Submit number</button>
+                <p id="demo"></p>
+
+            </form>
+
+        </div>
+
+        <a href="#p1">Go to top of page</a> <br><br>
+        <div id="wholeLaunchForm">
+        <h1>Launch Checklist Form</h1>
+        <div id="missionTarget" data-testid="missionTarget">
+        </div>
+        <div id="launchForm">
+            <form data-testid="testForm">
+                <div class="formField">
+                    <label>Pilot Name <input type="text" name="pilotName" id="pilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Co-pilot Name <input type="text" name="copilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Fuel Level (L) <input type="text" name="fuelLevel" /></label>
+                </div>
+                <div class="formField">
+                    <label>Cargo Mass (kg) <input type="text" name="cargoMass" /></label>
+                </div>
+                <button id="formSubmit">Submit</button>
+                <p id="deleteBeforeSubmission">Extra text para</p>
+            </form>
+        </div>
+        <div id="launchStatusCheck">
+            <h2 id="launchStatus" data-testid="launchStatus">Awaiting Information Before Launch</h2>
+            <div id="faultyItems" data-testid="faultyItems">
+                <ol>
+                    <li id="pilotStatus" data-testid="pilotStatus">Pilot Ready</li>
+                    <li id="copilotStatus" data-testid="copilotStatus">Co-pilot Ready</li>
+                    <li id="fuelStatus" data-testid="fuelStatus">Fuel level high enough for launch</li>
+                    <li id="cargoStatus" data-testid="cargoStatus">Cargo mass low enough for launch</li>
+                </ol>
+            </div>
+        </div>
+        </div><!--end of whole launch FOrm wnclosing div-->
+        <a href="#p1">Go to top of page</a> <br><br>
+        
+        <div id="shoppingForm">
+            <h1>Shopping Form</h1>
+            <form id="shopForm">
+                Number of milk gallon bottles <input id="shopItem">
+                <button type="button" onclick="itemCheckNumber()">Submit</button>
+                <p id="item"></p>
+
+            </form>
+
+
+        </div>
+
+        <a href="#p1">Go to top of page</a> <br>
+    </body>
+
+    </html>
+------------------=-------------------
+//script.js
+        // Write your JavaScript code here!
+        function myExit(){
+            document.getElementById("exit").innerHTML =`Good bye !`;
+        }
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = document.getElementById("checkNum").value;
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+          } else {
+            text = "Input OK";
+          }
+          document.getElementById("demo").innerHTML =`${text } 
+           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        }
+        
+
+        function itemCheckNumber() {
+            // Get the value of the input field with id="milkItem"
+            let x = document.getElementById("shopItem").value;
+            // If x is Not a Number or less than one or greater than 10
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+              text = "item Input not valid";
+            } else {
+              text = "item Input OK";
+            }
+            document.getElementById("item").innerHTML =`${text } 
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+          }
+
+//  // let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+//   'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+//   'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+// 'MadelineCOokies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+// 'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+//for(let i=0; i<shopItems.length; i++){
+    // shopItems[i] <input id="checkItem" >
+    //  <button type="button" onclick="itemCheckNumber">Submit</button>
+    //   <p id="milk"></p> 
+    //  }//<!--end of for shopItems-->
+    // function milkCheckNumber() {
+    //     for(let i=0;i<shopItems.length;i++){
+    //     // Get the value of the input field with id="numb"
+    //     let x = document.getElementById("milkItem").value;
+    //     // If x is Not a Number or less than one or greater than 10
+    //     let text;
+    //     if (isNaN(x) || x < 1 || x > 10) {
+    //       text = "Input not valid";
+    //     } else {
+    //       text = "Input OK";
+    //     }
+    //     document.getElementById("milk").innerHTML =`${text } 
+    //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+    // }//end of for shopItem
+    //  }
+
+// function myCheckItem() {
+//     // Get the value of the input field with id="numb"
+//     let x = document.getElementById("checkItem").value;
+//     // If x is Not a Number or less than one or greater than 10
+//     let text;
+//     if (isNaN(x) || x < 1 || x > 10) {
+//       text = "Input not valid";
+//     } else {
+//       text = "Input OK";
+//     }
+//     document.getElementById("demo").innerHTML =`${text } 
+//      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+//   }
+
+
+window.addEventListener("load", function() {
+    window.alert("All fields are required");
+    event.preventDefault();
+   
+    // let listedPlanets;
+    // // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+    // let listedPlanetsResponse;
+    // listedPlanetsResponse.then(function (result) {
+    //     listedPlanets = result;
+    //     console.log(listedPlanets);
+    // }).then(function () {
+    //     console.log(listedPlanets);
+    //     // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+    //     window.alert("All fields are required");
+    //     event.preventDefault();
+    // })
+    
+ });
+
+
+
+
+
+
+==========+++++++++++++++++==================
+==  10:23 PM 3/16/2022 working code below==+
+<! DOCTYPE>
+    <html>
+
+    <head>
+        <title>simpleForm1</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <p id="p1">This html page is used to test various properties that
+            could be used with HTML forms.
+        </p>
+        <a href="#simpleForm1">Simple Form</a>  <br>  
+        <a href="#launchForm">Launch Checklist Form</a>  <br>  
+        <div id="exitPage">
+            <a href="https://www.google.com/">If you want to exit this page, please click here</a>  <br>  
+            If you want to say Good bye to this page, please click here :- 
+             <input type="submit" onclick="myExit()" value="exit page">
+              <p id="exit"></p>
+        <br> <br>
+        </div>
+        <div id="simpleForm1">
+
+            <h1>Simple Form</h1>
+            <form>
+                
+                Enter a number in between 1 & 10: <input id="checkNum">
+                <button type="button" onclick="myCheckNumber()">Submit number</button>
+                <p id="demo"></p>
+              
+            </form>
+
+        </div>
+        <h1>Launch Checklist Form</h1>
+        <div id="missionTarget" data-testid="missionTarget">
+        </div>
+        <div id="launchForm">
+            <form data-testid="testForm">
+                <div class="formField">
+                    <label>Pilot Name <input type="text" name="pilotName" id="pilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Co-pilot Name <input type="text" name="copilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Fuel Level (L) <input type="text" name="fuelLevel" /></label>
+                </div>
+                <div class="formField">
+                    <label>Cargo Mass (kg) <input type="text" name="cargoMass" /></label>
+                </div>
+                <button id="formSubmit">Submit</button>
+                <p id="deleteBeforeSubmission">Extra text para</p>
+            </form>
+        </div>
+        <div id="launchStatusCheck">
+            <h2 id="launchStatus" data-testid="launchStatus">Awaiting Information Before Launch</h2>
+            <div id="faultyItems" data-testid="faultyItems">
+                <ol>
+                    <li id="pilotStatus" data-testid="pilotStatus">Pilot Ready</li>
+                    <li id="copilotStatus" data-testid="copilotStatus">Co-pilot Ready</li>
+                    <li id="fuelStatus" data-testid="fuelStatus">Fuel level high enough for launch</li>
+                    <li id="cargoStatus" data-testid="cargoStatus">Cargo mass low enough for launch</li>
+                </ol>
+            </div>
+        </div>
+        <a href="#p1">Go to top of page</a>  <br>
+    </body>
+
+    </html>
+-----------------------=------------------------
+       
+        // Write your JavaScript code here!
+        function myExit(){
+            document.getElementById("exit").innerHTML =`Good bye !`;
+        }
+    
+        
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = document.getElementById("checkNum").value;
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+          } else {
+            text = "Input OK";
+          }
+          document.getElementById("demo").innerHTML =`${text } 
+           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        }
+window.addEventListener("load", function() {
+    window.alert("All fields are required");
+    event.preventDefault();
+   
+    let listedPlanets;
+    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+    let listedPlanetsResponse;
+    listedPlanetsResponse.then(function (result) {
+        listedPlanets = result;
+        console.log(listedPlanets);
+    }).then(function () {
+        console.log(listedPlanets);
+        // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+        window.alert("All fields are required");
+        event.preventDefault();
+    })
+    
+ });
+
+
+
+
+======= 9:10 PM 3/16/2022 working code below===++++++++++
+<! DOCTYPE>
+    <html>
+
+    <head>
+        <title>simpleForm1</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <p id="p1">This html page is used to test various properties that
+            could be used with HTML forms.
+        </p>
+        <div id="exitPage">
+            <a href="https://www.google.com/">If you want to exit this page, please click here</a>  <br>  
+            If you want to say Good bye to this page, please click here :- 
+             <input type="submit" onclick="myExit()" value="exit page">
+              <p id="exit"></p>
+        <br> <br>
+
+        <script>
+        function myExit(){
+            document.getElementById("exit").innerHTML =`Good bye !`;
+        }
+    </script>
+        </div>
+        <div id="simpleForm1">
+
+            <h1>Simple Form</h1>
+            <form>
+                
+                Enter a number in between 1 & 10: <input id="checkNum">
+                <button type="button" onclick="myCheckNumber()">Submit number</button>
+                <p id="demo"></p>
+                <script>
+                    function myCheckNumber() {
+                      // Get the value of the input field with id="numb"
+                      let x = document.getElementById("checkNum").value;
+                      // If x is Not a Number or less than one or greater than 10
+                      let text;
+                      if (isNaN(x) || x < 1 || x > 10) {
+                        text = "Input not valid";
+                      } else {
+                        text = "Input OK";
+                      }
+                      document.getElementById("demo").innerHTML =`${text } 
+                       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+                    }
+                    </script>
+            </form>
+
+        </div>
+        <h1>Launch Checklist Form</h1>
+        <div id="missionTarget" data-testid="missionTarget">
+        </div>
+        <div id="launchForm">
+            <form data-testid="testForm">
+                <div class="formField">
+                    <label>Pilot Name <input type="text" name="pilotName" id="pilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Co-pilot Name <input type="text" name="copilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Fuel Level (L) <input type="text" name="fuelLevel" /></label>
+                </div>
+                <div class="formField">
+                    <label>Cargo Mass (kg) <input type="text" name="cargoMass" /></label>
+                </div>
+                <button id="formSubmit">Submit</button>
+                <p id="deleteBeforeSubmission">Extra text para</p>
+            </form>
+        </div>
+        <div id="launchStatusCheck">
+            <h2 id="launchStatus" data-testid="launchStatus">Awaiting Information Before Launch</h2>
+            <div id="faultyItems" data-testid="faultyItems">
+                <ol>
+                    <li id="pilotStatus" data-testid="pilotStatus">Pilot Ready</li>
+                    <li id="copilotStatus" data-testid="copilotStatus">Co-pilot Ready</li>
+                    <li id="fuelStatus" data-testid="fuelStatus">Fuel level high enough for launch</li>
+                    <li id="cargoStatus" data-testid="cargoStatus">Cargo mass low enough for launch</li>
+                </ol>
+            </div>
+        </div>
+        
+    </body>
+
+    </html>
+
+=============++++++++=====================
+
+
+
+
+

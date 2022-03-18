@@ -1,0 +1,219 @@
+
+        // Write your JavaScript code here!
+        function myExit(){
+            document.getElementById("exit").innerHTML =`Good bye !`;
+        }
+       
+        function myCheckNumber() {
+          // Get the value of the input field with id="numb"
+          let x = document.getElementById("checkNum").value;
+          // If x is Not a Number or less than one or greater than 10
+          let text;
+          if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+          } else {
+            text = "Input OK";
+          }
+          document.getElementById("demo").innerHTML =`${text } 
+           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        }
+        
+
+        // function itemCheckNumber() {
+        //     // Get the value of the input field with id="milkItem"
+        //     let x = document.getElementById("shopItem").value;
+        //     // If x is Not a Number or less than one or greater than 10
+        //     let text;
+        //     if (isNaN(x) || x < 1 || x > 10) {
+        //       text = "item Input not valid";
+        //     } else {
+        //       text = "item Input OK";
+        //     }
+        //     document.getElementById("item").innerHTML =`${text } 
+        //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+        //   }
+  let shopItems = ['orangeJuice','lettuce','Spinach','Cauliflower','yogurt',
+  'eggs','chocolate','pretzels','chicken','beef','onions','potatoes',
+  'groundTurkey','deliMeat','fetaCheese','MozarellaCheese','turkeyBacon','porkSteak',
+'MadelineCOokies','carrotJuice','greenPeppers','Zucchini','cucumbers','cilantro',
+'butter','tomatoSauce','appleSauce','curryLeaves','dosaiMix','celery'];
+let myList = {};
+let itemArray = [];
+let numberArray = []; 
+  function eachItemCheck(strItem){
+        document.getElementById("currentItem").innerHTML = `${strItem}`;
+            // Get the value of the input field with id="shopItem"
+            let x = document.getElementById("shopItem").value;
+            // If x is Not a Number or less than one or greater than 10
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+              text = "item Input not valid";
+            } else {
+              text = "item Input OK";
+              console.log(x);
+              itemArray.push(shopItems[i]);
+              numberArray.push(x);
+            }
+            document.getElementById("item").innerHTML =`${text } 
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+             document.getElementById("itemArray").innerHTML =`${itemArray}`;
+             document.getElementById("numberArray").innerHTML = `${x}`;
+
+}
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+    eachItemCheck(shopItems[i]);
+    
+    }
+    
+
+//for(let i=0; i<shopItems.length; i++){
+    // shopItems[i] <input id="checkItem" >
+    //  <button type="button" onclick="itemCheckNumber">Submit</button>
+    //   <p id="milk"></p> 
+    //  }//<!--end of for shopItems-->
+    // function milkCheckNumber() {
+    //     for(let i=0;i<shopItems.length;i++){
+    //     // Get the value of the input field with id="numb"
+    //     let x = document.getElementById("milkItem").value;
+    //     // If x is Not a Number or less than one or greater than 10
+    //     let text;
+    //     if (isNaN(x) || x < 1 || x > 10) {
+    //       text = "Input not valid";
+    //     } else {
+    //       text = "Input OK";
+    //     }
+    //     document.getElementById("milk").innerHTML =`${text } 
+    //      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+    // }//end of for shopItem
+    //  }
+
+// function myCheckItem() {
+//     // Get the value of the input field with id="numb"
+//     let x = document.getElementById("checkItem").value;
+//     // If x is Not a Number or less than one or greater than 10
+//     let text;
+//     if (isNaN(x) || x < 1 || x > 10) {
+//       text = "Input not valid";
+//     } else {
+//       text = "Input OK";
+//     }
+//     document.getElementById("demo").innerHTML =`${text } 
+//      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hannah succeeds !`;
+//   }
+
+
+window.addEventListener("load", function() {
+    window.alert("All fields are required");
+    event.preventDefault();
+   
+    // let listedPlanets;
+    // // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+    // let listedPlanetsResponse;
+    // listedPlanetsResponse.then(function (result) {
+    //     listedPlanets = result;
+    //     console.log(listedPlanets);
+    // }).then(function () {
+    //     console.log(listedPlanets);
+    //     // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+    //     window.alert("All fields are required");
+    //     event.preventDefault();
+    // })
+    
+ });
+
+
+
+
+<! DOCTYPE>
+    <html>
+
+    <head>
+        <title>simpleForm1</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <p id="p1">This html page is used to test various properties that
+            could be used with HTML forms.
+        </p>
+        <a href="#simpleForm1">Simple Form</a> <br>
+        <a href="#launchForm">Launch Checklist Form</a> <br>
+        <a href="#shoppingForm">Shopping Form</a> <br>
+
+        <div id="exitPage">
+            <a href="https://www.google.com/">If you want to exit this page, please click here</a> <br>
+            If you want to say Good bye to this page, please click here :-
+            <input type="submit" onclick="myExit()" value="exit page">
+            <p id="exit"></p>
+            <br> <br>
+        </div>
+        <div id="simpleForm1">
+
+            <h1>Simple Form</h1>
+            <form>
+
+                Enter a number in between 1 & 10: <input id="checkNum">
+                <button type="button" onclick="myCheckNumber()">Submit number</button>
+                <p id="demo"></p>
+
+            </form>zX
+
+        </div>
+
+        <a href="#p1">Go to top of page</a> <br><br>
+        <div id="wholeLaunchForm">
+        <h1>Launch Checklist Form</h1>
+        <div id="missionTarget" data-testid="missionTarget">
+        </div>
+        <div id="launchForm">
+            <form data-testid="testForm">
+                <div class="formField">
+                    <label>Pilot Name <input type="text" name="pilotName" id="pilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Co-pilot Name <input type="text" name="copilotName" /></label>
+                </div>
+                <div class="formField">
+                    <label>Fuel Level (L) <input type="text" name="fuelLevel" /></label>
+                </div>
+                <div class="formField">
+                    <label>Cargo Mass (kg) <input type="text" name="cargoMass" /></label>
+                </div>
+                <button id="formSubmit">Submit</button>
+                <p id="deleteBeforeSubmission">Extra text para</p>
+            </form>
+        </div>
+        <div id="launchStatusCheck">
+            <h2 id="launchStatus" data-testid="launchStatus">Awaiting Information Before Launch</h2>
+            <div id="faultyItems" data-testid="faultyItems">
+                <ol>
+                    <li id="pilotStatus" data-testid="pilotStatus">Pilot Ready</li>
+                    <li id="copilotStatus" data-testid="copilotStatus">Co-pilot Ready</li>
+                    <li id="fuelStatus" data-testid="fuelStatus">Fuel level high enough for launch</li>
+                    <li id="cargoStatus" data-testid="cargoStatus">Cargo mass low enough for launch</li>
+                </ol>
+            </div>
+        </div>
+        </div><!--end of whole launch FOrm wnclosing div-->
+        <a href="#p1">Go to top of page</a> <br><br>
+        
+        <div id="shoppingForm">
+            <h1>Shopping Form</h1>
+            <form id="shopForm">
+                <p id="currentItem"></p> <input id="shopItem">
+                <button type="button" onclick="itemCheckNumber()">Submit</button>
+                <p id="item"></p>
+                <p id="itemArray"></p>
+                <p id="numberArray"></p>
+            </form>
+
+
+        </div>
+
+        <a href="#p1">Go to top of page</a> <br>
+    </body>
+
+    </html>

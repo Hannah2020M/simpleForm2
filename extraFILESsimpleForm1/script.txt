@@ -1,0 +1,42 @@
+//https://replit.com/@Hcoder/formFORjs1a#index.js
+//(home)/coding2021Practice2022/JavaScript2022/miscPractJS2a/nestedFOR/nestedFor/nestedFORloop/
+const input = require("readline-sync");
+let shopItems = ['orangeJuice','Spinach    ','tomatoSauce'];
+let myList = []; let itemArray = []; let numberArray = [];
+let honeyDo=[];let noteArray=[];
+  function eachItemCheck(strItem){
+             let y =input.question(`Enter a number for quantity of  ${strItem}: `);
+             let text;
+            if (isNaN(y) || y < 0 || y > 10) { text = " Input not valid";           
+            } else { text = " Input OK";
+              itemArray.push(strItem);
+              numberArray.push(y);
+              let note=input.question('Enter additional notes: ');
+                    console.log(" ");
+              noteArray.push(note);
+              }
+  }
+function itemDoneObj(item,itemNum){
+    this.item = item;
+    this.itemNum = itemNum;
+}
+itemDoneObj.prototype.getItem = function(){ return this.item};
+itemDoneObj.prototype.getItemNum= function(){return this.getItemNum};
+function itemCheckNumber() {
+    for (let i=0;i<shopItems.length; i++){
+      eachItemCheck(shopItems[i]);
+      let itemObj = new itemDoneObj(itemArray[i],numberArray[i]);
+      itemObj["note"] = 'Additional info';
+      itemObj.note = noteArray[i];
+//console.log(itemObj);
+      myList.push(itemObj);
+    //  console.log('myList iteration');console.log(myList);
+      honeyDo.push(Number(itemObj.itemNum)); 
+      honeyDo.push(itemObj.item);
+         }  let b = myList + honeyDo;
+            return myList;
+}
+console.log(itemCheckNumber());
+//console.log('myList');console.log(myList);
+console.log('honeyDo');console.log(honeyDo);
+//  console.log('honeyDo');console.log(honeyDo);
